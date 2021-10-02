@@ -1,0 +1,13 @@
+:root {
+  font-size: 10px;
+}
+
+body {
+  background: rgb(34, 138, 37);
+  background: radial-gradient(
+    circle,
+    rgba(34, 138, 37, 1) 0%,
+    rgba(34, 138, 37, 1) 35%,
+    rgba(33, 57, 34, 1) 100%
+  );
+}

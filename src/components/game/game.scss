@@ -1,0 +1,19 @@
+.game__top {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  min-height: 20vh;
+
+  &-foundation {
+    display: flex;
+    & > * {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.game__bottom {
+  height: 60vh;
+  display: flex;
+  justify-content: space-around;
+}
