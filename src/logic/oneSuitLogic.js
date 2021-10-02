@@ -1,6 +1,5 @@
 import cardInfo from '../utils/cardInfo.json';
 import * as _ from 'lodash';
-import { get } from 'lodash';
 
 /* Populate cards when the game starting */
 export const populateOneSuitCards = () => {
@@ -84,7 +83,6 @@ export const removeSelection = (game, setGame) => {
         deck[i].isHighlighted = false;
       }
     });
-    tempDecks;
     setGame((prev) => ({
       ...prev,
       selected: [],

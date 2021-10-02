@@ -117,8 +117,7 @@ export const cardSelect = (card, game, setGame, deckId, cardId) => {
 const checkMove = (game, setGame, tempSelected) => {
   const fromCard = tempSelected[0];
   const toCard = tempSelected[1];
-  const fromRank = getRank(fromCard);
-  const toRank = getRank(toCard);
+
   const toDeck = game.decks[toCard.deck];
 
   if (toDeck[toDeck.length - 1] !== toCard) {
@@ -181,20 +180,15 @@ const getRank = (card) => {
   switch (card.rank) {
     case 'A':
       return 1;
-      break;
     case 'J':
       return 11;
-      break;
     case 'Q':
       return 12;
-      break;
     case 'K':
       return 13;
-      break;
 
     default:
       return parseInt(card.rank);
-      break;
   }
 };
 
