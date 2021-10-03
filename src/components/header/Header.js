@@ -2,9 +2,7 @@ import './header.scss';
 import React from 'react';
 import { useStopwatch } from 'react-timer-hook';
 
-const Header = () => {
-  const { seconds, minutes, reset } = useStopwatch({ autoStart: true });
-
+const Header = ({ minutes, seconds, reset }) => {
   const handleReset = () => {
     reset();
     window.location.reload();

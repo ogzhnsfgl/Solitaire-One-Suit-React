@@ -11,6 +11,8 @@ import './game.scss';
 import '../cardHolder/cardHolder.scss';
 import { useMediaQuery } from 'react-responsive';
 import ScreenSizeWarn from '../screenSizeWarn/ScreenSizeWarn';
+import GameCompleted from '../gameCompleted/GameCompleted';
+import { useStopwatch } from 'react-timer-hook';
 
 const gameInitialState = {
   cards: [],
@@ -35,14 +37,27 @@ const Game = () => {
 
   const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
 
+  const { seconds, minutes, reset, pause } = useStopwatch({ autoStart: true });
+
   if (isPortrait) {
     return <ScreenSizeWarn />;
+  }
+
+  if (game.hands === 1) {
+    return (
+      <GameCompleted
+        seconds={seconds}
+        minutes={minutes}
+        reset={reset}
+        pause={pause}
+      />
+    );
   }
 
   return (
     <>
       <div>
-        <Header />
+        <Header seconds={seconds} minutes={minutes} reset={reset} />
       </div>
       <div className="game">
         <div className="game__top">
