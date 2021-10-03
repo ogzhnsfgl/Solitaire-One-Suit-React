@@ -9,6 +9,7 @@ const GameCompleted = ({ minutes, seconds, reset, pause }) => {
 
   useEffect(() => {
     pause();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <div className="completed-container">
