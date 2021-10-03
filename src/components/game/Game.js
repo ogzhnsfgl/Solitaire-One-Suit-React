@@ -91,6 +91,7 @@ const Game = () => {
                     isDown={false}
                     isSelected={false}
                     isHighlighted={false}
+                    key={index}
                   />
                 ))}
           </div>
@@ -105,6 +106,7 @@ const Game = () => {
                       ('click');
                       selectCard(game.selectedCard, deck, true, game, setGame);
                     }}
+                    key={index}
                   >
                     <CardHolder isHighligted={false} key={index} />
                   </div>

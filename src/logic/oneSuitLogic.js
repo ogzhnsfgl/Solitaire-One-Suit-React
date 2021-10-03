@@ -20,6 +20,7 @@ export const populateOneSuitCards = () => {
   });
   /* Create decks */
   let shuffledCards = _.shuffle(cards);
+  shuffledCards = _.shuffle(shuffledCards);
   /* Create 10 arrays that each has 5 cards from first 50 cards */
   decks = _.chunk(shuffledCards.slice(0, 50), 5);
   /* last 54 cards are placed decks[10] for using as stock */

@@ -14,7 +14,7 @@ const Header = ({ minutes, seconds, reset }) => {
         <div className="control-group">
           <div className="timer-zone">
             <div className="timer-icon">
-              <i class="fas fa-hourglass-half"></i>
+              <i className="fas fa-hourglass-half"></i>
             </div>
             {minutes / 10 >= 1 && <span>{minutes}</span>}
             {minutes / 10 < 1 && <span>0{minutes}</span>}:
@@ -22,7 +22,7 @@ const Header = ({ minutes, seconds, reset }) => {
             {seconds / 10 < 1 && <span>0{seconds}</span>}
           </div>
           <div className="btn-res" onClick={handleReset}>
-            <i class="fas fa-sync-alt"></i>
+            <i className="fas fa-sync-alt"></i>
           </div>
         </div>
       </div>
