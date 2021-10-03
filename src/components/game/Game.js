@@ -9,6 +9,9 @@ import Card from '../card/Card';
 import CardHolder from '../cardHolder/CardHolder';
 import './game.scss';
 import '../cardHolder/cardHolder.scss';
+import { useMediaQuery } from 'react-responsive';
+import ScreenSizeWarn from '../screenSizeWarn/ScreenSizeWarn';
+
 const gameInitialState = {
   cards: [],
   decks: [],
@@ -29,6 +32,12 @@ const Game = () => {
     setCards({ decks, cards });
     setGame((prev) => ({ ...prev, cards, decks }));
   }, []);
+
+  const isPortrait = useMediaQuery({ query: '(orientation: portrait)' });
+
+  if (isPortrait) {
+    return <ScreenSizeWarn />;
+  }
 
   return (
     <>

@@ -17,7 +17,6 @@ header {
   margin: 0 auto;
   width: 90%;
   height: 100%;
-  // line-height: 5rem;
   color: whitesmoke;
 }
 
@@ -29,6 +28,12 @@ header {
   font-size: 2rem;
   @include screenSize('xlarge') {
     font-size: 1.5rem;
+  }
+  @include screenSize('large') {
+    font-size: 1.2rem;
+  }
+  @include screenSize('medium') {
+    font-size: 1rem;
   }
   .timer-zone {
     background-color: rgba(0, 0, 0, 0.521);

@@ -8,6 +8,9 @@
   border-radius: 1rem;
   padding: 1vw;
   font-size: 1.2vw;
+  @include screenSize('xlarge') {
+    font-size: 1.5vw;
+  }
 
   transition: $general-transition;
   background: $white-color;
@@ -53,6 +56,9 @@
     background-position: center;
     background-size: 105%;
     margin-bottom: -8.5vw;
+    @include screenSize('xlarge') {
+      margin-bottom: -10.5vw;
+    }
     & > .card__content {
       visibility: hidden;
     }
