@@ -43,7 +43,7 @@ const Game = () => {
     return <ScreenSizeWarn />;
   }
 
-  if (game.hands === 1) {
+  if (game.hands === 8) {
     return (
       <GameCompleted
         seconds={seconds}
