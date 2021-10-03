@@ -1,7 +1,10 @@
 # :spades: One Suit Solitaire
 
-![Mobile-gif](./src/assets/gifs/web-gif.gif)
-![mobile-gif](./src/assets/gifs/mobile-gif.gif)
+<p align="center">
+<img src="./src/assets/gifs/web-gif.gif" alt="web-gif" width="600"/>
+  <br/>
+<img src="./src/assets/gifs/mobile-gif.gif" alt="mobile-gif" width="600"/>
+</p>
 
 **Live demo avaliable [here.](https://solitaire-one-suit-react.vercel.app/)**
 
