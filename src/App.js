@@ -1,4 +1,4 @@
-import './app.scss';
+import './main.scss';
 
 import Game from './components/game/Game';
 

@@ -1,64 +1,58 @@
+@import '../../main.scss';
+
 .card {
   position: relative;
-  width: 12rem;
-  height: 18rem;
+  width: 7.9vw;
+  height: 11.8vw;
   border: 1px solid black;
   border-radius: 1rem;
-  padding: 0.2rem;
-  font-size: 1.7rem;
-  transition: all 0.4s;
-  background: white;
+  padding: 1vw;
+  font-size: 1.2vw;
+
+  transition: $general-transition;
+  background: $white-color;
 
   &__content {
-    padding: 0.3rem;
-  }
-  &__rank,
-  &__suite {
-    text-align: left;
-    &-right {
-      margin-right: 1rem;
-      transform: rotate(180deg);
-      position: relative;
-      top: 9.5rem;
-      margin-right: 0.4vw;
-    }
+    padding: 0.3vw;
   }
 
   &__suite {
+    position: absolute;
     text-align: left;
-    margin-left: 0.2vw;
-    font-size: x-large;
+    top: 1vw;
+    left: 0vw;
   }
   &__suite-right {
     text-align: left;
     position: relative;
     transform: rotate(180deg);
-    top: 6rem;
-    margin-right: 0.4vw;
-    margin-left: 0;
+    position: absolute;
+    right: 0vw;
+    bottom: 1vw;
   }
   &__rank {
     text-align: left;
-    margin-left: 0.2vw;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
 
     &-right {
       text-align: left;
-      position: relative;
+      position: absolute;
       transform: rotate(180deg);
-      top: 10.5rem;
-      margin-right: 0.4vw;
-      margin-left: 0;
+      right: 0vw;
+      bottom: 0vw;
     }
   }
 
   &__down,
   &__stockcards {
-    background: url('../../assets/card_back.png') #ffffff;
+    background: url('../../assets/card_back.png') $white-color;
     color: black;
     background-repeat: no-repeat;
     background-position: center;
     background-size: 105%;
-    margin-bottom: -16.5rem;
+    margin-bottom: -8.5vw;
     & > .card__content {
       visibility: hidden;
     }
@@ -66,8 +60,7 @@
 
   &__stockcards {
     margin-bottom: 0;
-    margin-right: 10rem;
-    min-width: 12rem;
+    margin-right: 1vw;
 
     &-empty {
       background: none;
@@ -75,7 +68,7 @@
   }
 
   &__selected {
-    border: 1px solid rgb(131, 2, 2);
+    border: 1px solid $red-color;
     box-shadow: 0px 11px 9px 3px rgba(0, 0, 0, 0.658) !important;
     transform: scale(1.05);
     &:hover {
@@ -84,12 +77,16 @@
   }
 
   &__stack {
-    margin-bottom: -15rem;
+    margin-bottom: -10.6vw;
+    @include screenSize('xlarge') {
+      margin-bottom: -8vw;
+    }
   }
 }
 .spade {
-  background: url('../../assets/spade.png') #ffffff;
-  color: black;
+  background: url('../../assets/spade.png');
+  background-color: $white-color;
+  color: $black-color;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50%;

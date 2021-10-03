@@ -141,7 +141,17 @@ export const moveCard = (fromCard, fromDeck, toDeck, game, setGame) => {
 
 export const dealingStockCards = (game, setGame) => {
   if (game.decks[10].length !== 0) {
-    if (game.decks.find((deck) => _.isEmpty(deck))) {
+    let totalFaceUpCard = 0;
+    game.decks.forEach((deck) =>
+      deck.forEach((card) =>
+        card.isDown === false ? (totalFaceUpCard += 1) : totalFaceUpCard
+      )
+    );
+    let totalEmptyHolder = 0;
+    game.decks.forEach((deck) =>
+      _.isEmpty(deck) ? totalEmptyHolder + 1 : totalEmptyHolder
+    );
+    if (totalEmptyHolder > totalFaceUpCard) {
       alert('All slots must have at least one card to dealing!');
       return;
     }

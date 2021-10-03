@@ -1,19 +1,18 @@
 .game__top {
-  padding: 2rem;
+  padding: 0 2vw 2vw 2vw;
+
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   min-height: 20vh;
 
   &-foundation {
     display: flex;
-    & > * {
-      margin-right: 0.5rem;
-    }
   }
 }
 
 .game__bottom {
-  height: 60vh;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  height: 60vh;
+  padding: 0 2vw;
 }
