@@ -25,3 +25,7 @@
 - Klondike and Two Suit game modes
 - Playing with drag and drop
 - Unit tests will be added asap.
+
+### References:
+Thanks to [@ashish0910](https://github.com/ashish0910) for inspiration the project. His project helped me a lot. 
+Ashish version available [here.](https://github.com/ashish0910/React-Solitaire)
